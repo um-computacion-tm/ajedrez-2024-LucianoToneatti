@@ -7,15 +7,12 @@ jobs:
       - checkout
       - run:
           name: Install dependencies
-          comand: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install -r requirements.txt
+          comand: pip install -r requirements.txt
       - run:
           name: Run tests
-          command: |
-            . venv/bin/activate
-            python -m unittest test.py
+          command: coverage run -m unittest && coverage xml && coverage report -m 
+          
+      
 
 
 
