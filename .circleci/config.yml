@@ -2,20 +2,27 @@ version: 2.1
 jobs:
   build:
     docker:
-     - image: cimg/python:3.11.2
+      - image: cimg/python:3.11.2
     steps:
       - checkout
       - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+            ./cc-test-reporter before-build
+      - run:
           name: Install dependencies
-          comand: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install -r requirements.txt
+          command: pip install -r requirements.txt
       - run:
           name: Run tests
+          command: coverage run -m unittest && coverage xml && coverage report -m
+      - run:
+          name: Upload CodeClimate coverage report
           command: |
-            . venv/bin/activate
-            python -m unittest test.py
+            ./cc-test-reporter after-build
+          
+      
 
 
 
