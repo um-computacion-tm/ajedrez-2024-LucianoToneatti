@@ -1,4 +1,4 @@
-from chess.chess import Chess
+from ajedrez.chess import Chess
 def main():
     chess = Chess() 
     while  True:

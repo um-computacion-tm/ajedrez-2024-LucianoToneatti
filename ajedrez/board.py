@@ -1,4 +1,4 @@
-from chess.pieces import Rook
+from ajedrez.pieces import Rook
 class Board:
 
     def __init__(self): # Crear un tablero de 8x8 
