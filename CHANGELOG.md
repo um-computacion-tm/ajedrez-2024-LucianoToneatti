@@ -1,7 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-[0.0.1] - 2024-08-14
+# [0.0.2] - 2024-08-15
+
+### Added
+
+-Today I only focused on trying to create a function that allows me to make the movements of the rooks and then send the movements of the rooks to the board.
+
+
+# [0.0.1] - 2024-08-14
 
 ### Added
 

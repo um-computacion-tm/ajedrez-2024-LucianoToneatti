@@ -16,6 +16,18 @@ class Board:
         self.__positions__[7][7] = Rook("WHITE") #White 
         self.__positions__[7][0] = Rook("WHITE") #White
 
-
+    #Sirve para obtener la pieza
+    
     def get_piece(self, row, col):
         return self.__positions__[row][col]
+    
+    #Sirve para obtener los movimientos de las torres para luego usarlos en el tablero
+
+    def get_rook_moves(self, row, col): 
+        rook = self.get_piece(row, col)
+        if isinstance(rook, Rook):
+            return rook.movimientos_basicos_de_torres(row, col)
+        else:
+            return []
+        
+        #Todavia no implemento la colicion de piezas
