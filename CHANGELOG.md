@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [0.0.4] - 2024-08-17
+
+### Added
+
+-Today's new addition was creating and understanding how the diagonal movement of the bishops could be done and soon I will use the same code for the queen that moves diagonally.
+-Also add the function to obtain the bishop's movements.
+
 
 # [0.0.3] - 2024-08-16
 

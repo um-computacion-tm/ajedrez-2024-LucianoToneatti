@@ -68,4 +68,14 @@ class Board:
         else:
             return []
         
+    #Sirve para obtener los movimientos de los alfiles para luego usarlos en el tablero
+
+    def get_alfils_moves(self, row, col):
+        alfil = self.get_piece(row, col)
+        if isinstance(alfil, Alfils):
+            return alfil.movimientos_basicos_de_alfiles(row, col)
+        else:
+            return []
+    
+
         #Todavia no implemento la colicion de piezas
