@@ -29,9 +29,29 @@ class Rook(Piece):
                 moves.append((row, c))
 
         return moves
-    
+#############
+
+###ALFILS###
+class Alfils(Piece):
+    pass
+#############
+
+###REYES###
+class Knight(Piece):
+    pass
+#############
+
+###REINAS###
+class Queen(Piece):
+    pass
+#############
+
+###CABALLOS###
+class Horse(Piece):
+    pass
 #############
 
 ###PEONES###
 class Pawn(Piece):     
     pass
+#############

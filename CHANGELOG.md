@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+
+# [0.0.3] - 2024-08-16
+
+### Added
+
+-This day was very good because I managed to place the pieces I was missing on the board and classify them by color, in addition to testing it.
+-Soon I will try to add the movements to the pieces and I will try to optimize the Test that marks the empty boxes.
+
 # [0.0.2] - 2024-08-15
 
 ### Added

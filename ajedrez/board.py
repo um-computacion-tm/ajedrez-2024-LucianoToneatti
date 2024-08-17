@@ -1,4 +1,9 @@
 from ajedrez.pieces import Rook
+from ajedrez.pieces import Pawn
+from ajedrez.pieces import Queen
+from ajedrez.pieces import Knight
+from ajedrez.pieces import Horse
+from ajedrez.pieces import Alfils
 class Board:
 
     def __init__(self): # Crear un tablero de 8x8 
@@ -9,12 +14,45 @@ class Board:
                 col.append(None)
             self.__positions__.append(col)
 
-        #Le damos posiciones a las torres Black y White#   
+        #Le damos posiciones a las Torres Black y White#   
 
         self.__positions__[0][0] = Rook("BLACK") #Black
         self.__positions__[0][7] = Rook("BLACK") #Black
         self.__positions__[7][7] = Rook("WHITE") #White 
         self.__positions__[7][0] = Rook("WHITE") #White
+
+
+        #Le damos posiciones a los Alfiles negros y blancos#
+
+        self.__positions__[0][1] = Alfils("BLACK") #Black
+        self.__positions__[0][6] = Alfils("BLACK") #Black
+        self.__positions__[7][1] = Alfils("WHITE") #White 
+        self.__positions__[7][6] = Alfils("WHITE") #White
+
+        #Le damos posiciones a los Caballos negros y blancos#
+
+        self.__positions__[0][2] = Horse("BLACK") #Black
+        self.__positions__[0][5] = Horse("BLACK") #Black
+        self.__positions__[7][2] = Horse("WHITE") #White 
+        self.__positions__[7][5] = Horse("WHITE") #White
+
+        #Le damos posiciones a los Peones negros y blancos#
+
+        for i in range(8):
+            self.__positions__[1][i] = Pawn("BLACK") #Black
+            self.__positions__[6][i] = Pawn("WHITE") #White
+
+
+        #Le damos posiciones a las Reinas negras y blancas#
+
+        self.__positions__[0][3] = Queen("BLACK") #Black
+        self.__positions__[7][3] = Queen("WHITE") #White
+
+        #Le damos posiciones a los Reyes negros y blancos#
+
+        self.__positions__[0][4] = Knight("BLACK") #Black
+        self.__positions__[7][4] = Knight("WHITE") #White
+
 
     #Sirve para obtener la pieza
     
