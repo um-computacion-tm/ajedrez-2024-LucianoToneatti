@@ -34,6 +34,9 @@ class Rook(Piece):
 ###ALFILS###
 class Alfils(Piece):
     
+    def __init__(self, color):
+        super().__init__(color) 
+
     def movimientos_basicos_de_alfiles(self, row, col):
         
         moves = []
@@ -83,12 +86,18 @@ class Knight(Piece):
 #############
 
 ###REINAS###
-class Queen(Piece, Alfils, Rook): #Tuve que hacer la herencia multiple para poder reutilizar las funciones de Rook y Alfils
+class Queen(Piece): #Al parecer a los test no le gustan las herencias multiples entonces tuve que arreglar mi clase Queen
+
+    def __init__(self, color):
+        super().__init__(color)
+
+        self.rook = Rook(color)
+        self.alfils = Alfils(color)
 
     def movimientos_basicos_de_reinas(self, row, col):
 
-        moves = []
-        moves = self.movimientos_basicos_de_torres(row, col) + self.movimientos_basicos_de_alfiles(row, col)
+        moves = self.rook.movimientos_basicos_de_torres(row, col)
+        moves += self.alfils.movimientos_basicos_de_alfiles(row, col)
         return moves
 
 #############
