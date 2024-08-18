@@ -79,11 +79,18 @@ class Alfils(Piece):
 ###REYES###
 class Knight(Piece):
     pass
+
 #############
 
 ###REINAS###
-class Queen(Piece):
-    pass
+class Queen(Piece, Alfils, Rook): #Tuve que hacer la herencia multiple para poder reutilizar las funciones de Rook y Alfils
+
+    def movimientos_basicos_de_reinas(self, row, col):
+
+        moves = []
+        moves = self.movimientos_basicos_de_torres(row, col) + self.movimientos_basicos_de_alfiles(row, col)
+        return moves
+
 #############
 
 ###CABALLOS###
