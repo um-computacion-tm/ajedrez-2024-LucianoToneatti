@@ -77,13 +77,20 @@ class Board:
         else:
             return []
     
-    #Sirve para obtener los movimientos de los caballos para luego usarlos en el tablero
+    #Sirve para obtener los movimientos de las reinas para luego usarlos en el tablero
     def get_Queen_moves(self, row, col):
         queen = self.get_piece(row, col)
         if isinstance(queen, Queen):
             return queen.movimientos_basicos_de_reinas(row, col)
         else:
             return []
-
-
+        
+    #Sirve para obtener los movimientos de los reyes para luego usarlos en el tablero
+    def get_Knight_moves(self, row, col):
+        knight = self.get_piece(row, col)
+        if isinstance(knight, Knight):
+            return knight.movimientos_basicos_de_reyes(row, col)
+        else:
+            return []
+        
         #Todavia no implemento la colicion de piezas

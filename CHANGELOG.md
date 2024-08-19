@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [0.0.6] - 2024-08-19
+
+### Added
+
+-I added the movements of the Kings, I thought it was going to be simpler than the others but there were complications as it was limited to only the nearby squares.
+-I also added the function in Board that obtains the movements of the Kings.
+
 # [0.0.5] - 2024-08-18
 
 ### Added
