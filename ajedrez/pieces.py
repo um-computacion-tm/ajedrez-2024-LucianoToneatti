@@ -31,6 +31,7 @@ class Rook(Piece):
         return moves
 #############
 
+
 ###ALFILS###
 class Alfils(Piece):
     
@@ -79,6 +80,7 @@ class Alfils(Piece):
     
 #############
 
+
 ###REYES###
 class Knight(Piece):
     
@@ -101,6 +103,7 @@ class Knight(Piece):
 
 #############
 
+
 ###REINAS###
 class Queen(Piece): #Al parecer a los test no le gustan las herencias multiples entonces tuve que arreglar mi clase Queen
 
@@ -118,12 +121,58 @@ class Queen(Piece): #Al parecer a los test no le gustan las herencias multiples 
 
 #############
 
+
 ###CABALLOS###
 class Horse(Piece):
-    pass
+    #No se me complico hacer el codigo de los movimientos del caballo porque 
+    # sigue el formato de los Reyes con la diferencia que las casillas que ocupa son diferentes
+    def __init__(self, color):
+        super().__init__(color)
+    
+    def movimientos_basicos_de_caballos(self, row, col):
+
+        moves = []
+        direcciones = [(-2, -1), (-2, 1), (-1, -2), (-1, 2), (1, -2), (1, 2), (2, -1), (2, 1)]
+
+        for direc_row, direc_col in direcciones:
+            nueva_fila, nueva_columna = row + direc_row, col + direc_col
+
+            if 0 <= nueva_fila < 8 and 0 <= nueva_columna < 8:
+                moves.append((nueva_fila, nueva_columna))
+
+        return moves
+    
 #############
 
 ###PEONES###
 class Pawn(Piece):     
-    pass
+    
+    def __init__(self, color):
+        super().__init__(color)
+
+    def movimientos_basicos_de_peones(self, row, col):
+
+        moves = []
+
+        if self.__color__ == "BLACK": #Primero pregunto el color de la pieza 
+
+            direcciones = [(1, 0), (2, 0)] #Le asigno sus posibles movimientos segun el color
+        
+        elif self.__color__ == "WHITE":
+
+            direcciones = [(-1, 0), (-2, 0)]
+        
+        for direc_row, direc_col in direcciones: #Despues recorro la lista de direcciones segun lo que alla tocado
+
+            nueva_fila, nueva_columna = row + direc_row, col + direc_col #Le asigno la nueva posision 
+                
+            if 0 <= nueva_fila < 8 and 0 <= nueva_columna < 8: #Y aca compruebo q no se salga el tablero
+                moves.append((nueva_fila, nueva_columna))
+
+        #En pocas palabras este codigo es diferente a los demas porque es una pieza la cual 
+        # sus movimientos dependen de su color, y luego añadire los movimientos de cuando 
+        # come otra pieza
+
+        return moves
+            
 #############

@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+
+# [0.0.7] - 2024-08-20
+
+### Added
+
+-Create the functions for the movements of the Knight and Pawn. But the function of the pawn's movement when eating pieces is still missing.
+
 # [0.0.6] - 2024-08-19
 
 ### Added
