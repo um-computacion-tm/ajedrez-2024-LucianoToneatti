@@ -1,2 +1,6 @@
 __pycache__/
 .coverage
+venv
+env
+htmlcov
+coverage.xml
