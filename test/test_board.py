@@ -1,11 +1,11 @@
 import unittest
 from ajedrez.board import Board
-from ajedrez.pieces import Rook
-from ajedrez.pieces import Pawn
-from ajedrez.pieces import Queen
-from ajedrez.pieces import Knight
-from ajedrez.pieces import Horse
-from ajedrez.pieces import Alfils
+from ajedrez.totalpieces.rook import Rook
+from ajedrez.totalpieces.pawn import Pawn
+from ajedrez.totalpieces.queens import Queen
+from ajedrez.totalpieces.kings import Kings
+from ajedrez.totalpieces.horse import Horse
+from ajedrez.totalpieces.alfils import Alfils
 ###Test_de_board###
 
 class TestBoard(unittest.TestCase):
@@ -73,12 +73,12 @@ class TestBoard(unittest.TestCase):
 
     ###REY NEGRO###
 
-        self.assertIsInstance(board.__positions__[0][4], Knight, "Debe haber un rey en (0,4)")
+        self.assertIsInstance(board.__positions__[0][4], Kings, "Debe haber un rey en (0,4)")
         self.assertEqual(board.__positions__[0][4].color, "BLACK", "El rey en (0,4) debe ser negro")
 
     ###REY BLANCO###
 
-        self.assertIsInstance(board.__positions__[7][4], Knight, "Debe haber un rey en (7,4)")
+        self.assertIsInstance(board.__positions__[7][4], Kings, "Debe haber un rey en (7,4)")
         self.assertEqual(board.__positions__[7][4].color, "WHITE", "El rey en (7,4) debe ser blanco")
 
     ###PEONES NEGROS###

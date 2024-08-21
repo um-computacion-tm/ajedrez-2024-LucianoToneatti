@@ -1,9 +1,9 @@
-from ajedrez.pieces import Rook
-from ajedrez.pieces import Pawn
-from ajedrez.pieces import Queen
-from ajedrez.pieces import Knight
-from ajedrez.pieces import Horse
-from ajedrez.pieces import Alfils
+from ajedrez.totalpieces.rook import Rook
+from ajedrez.totalpieces.pawn import Pawn
+from ajedrez.totalpieces.queens import Queen
+from ajedrez.totalpieces.kings import Kings
+from ajedrez.totalpieces.horse import Horse
+from ajedrez.totalpieces.alfils import Alfils
 class Board:
 
     def __init__(self): # Crear un tablero de 8x8 
@@ -50,8 +50,8 @@ class Board:
 
         #Le damos posiciones a los Reyes negros y blancos#
 
-        self.__positions__[0][4] = Knight("BLACK") #Black
-        self.__positions__[7][4] = Knight("WHITE") #White
+        self.__positions__[0][4] = Kings("BLACK") #Black
+        self.__positions__[7][4] = Kings("WHITE") #White
 
 
     #Sirve para obtener la pieza
@@ -86,10 +86,10 @@ class Board:
             return []
         
     #Sirve para obtener los movimientos de los reyes para luego usarlos en el tablero
-    def get_Knight_moves(self, row, col):
-        knight = self.get_piece(row, col)
-        if isinstance(knight, Knight):
-            return knight.movimientos_basicos_de_reyes(row, col)
+    def get_Kings_moves(self, row, col):
+        kings = self.get_piece(row, col)
+        if isinstance(kings, Kings):
+            return kings.movimientos_basicos_de_reyes(row, col)
         else:
             return []
         

@@ -1,6 +1,5 @@
 import unittest
-from board import Board
-from board import get_piece
+from ajedrez.board import Board
 
 class Chess:
 
@@ -13,7 +12,7 @@ class Chess:
         #Acordate de validar las coordenadas#
 
     #########Añade la pieza del tablero###########
-        piece = self.board.get_piece(from_row, from_col)
+        piece = self.__board__.get_piece(from_row, from_col)
     ###############################################
 
 

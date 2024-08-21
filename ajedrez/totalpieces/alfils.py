@@ -1,0 +1,49 @@
+from ajedrez.pieces import Piece
+
+###ALFILS###
+class Alfils(Piece):
+    
+    def __init__(self, color):
+        super().__init__(color) 
+
+    def movimientos_basicos_de_alfiles(self, row, col):
+        
+        moves = []
+
+        #Voy a marcar las "row" como r para mayor comodidad y "col" como c
+
+        ###ARRIBA IZQUIERDA###
+
+        r, c = row -1, col -1 #Les resto 1 para hacer los movimentos arriba izquierda
+        while r >=0 and c >=0:#Me permite hacer el movimiento las veces que quiera hasta que me salga del tablero en ese caso se corta el bucle
+            moves.append((r, c)) #Los agrego
+            r -= 1
+            c -= 1
+
+        ###ARRIBA DERECHA###
+
+        r, c = row -1, col +1
+        while r >=0 and c <=7:
+            moves.append((r, c)) 
+            r -= 1
+            c += 1
+
+        ###ABAJO IZQUIERDA###
+
+        r, c = row +1, col -1
+        while r <=7 and c >=0:
+            moves.append((r, c)) 
+            r += 1
+            c -= 1
+
+        ###ABAJO DERECHA###
+
+        r, c = row +1, col +1
+        while r <=7 and c <=7:
+            moves.append((r, c)) 
+            r += 1
+            c += 1
+
+        return moves
+    
+#############
