@@ -22,19 +22,19 @@ class Board:
         self.__positions__[7][0] = Rook("WHITE") #White
 
 
-        #Le damos posiciones a los Alfiles negros y blancos#
-
-        self.__positions__[0][1] = Alfils("BLACK") #Black
-        self.__positions__[0][6] = Alfils("BLACK") #Black
-        self.__positions__[7][1] = Alfils("WHITE") #White 
-        self.__positions__[7][6] = Alfils("WHITE") #White
-
         #Le damos posiciones a los Caballos negros y blancos#
 
-        self.__positions__[0][2] = Horse("BLACK") #Black
-        self.__positions__[0][5] = Horse("BLACK") #Black
-        self.__positions__[7][2] = Horse("WHITE") #White 
-        self.__positions__[7][5] = Horse("WHITE") #White
+        self.__positions__[0][1] = Horse("BLACK") #Black
+        self.__positions__[0][6] = Horse("BLACK") #Black
+        self.__positions__[7][1] = Horse("WHITE") #White 
+        self.__positions__[7][6] = Horse("WHITE") #White
+
+        #Le damos posiciones a los Alfiles negros y blancos#
+
+        self.__positions__[0][2] = Alfils("BLACK") #Black
+        self.__positions__[0][5] = Alfils("BLACK") #Black
+        self.__positions__[7][2] = Alfils("WHITE") #White 
+        self.__positions__[7][5] = Alfils("WHITE") #White
 
         #Le damos posiciones a los Peones negros y blancos#
 

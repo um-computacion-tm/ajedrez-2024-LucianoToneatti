@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 
 
+# [0.0.9] - 2024-08-22
+
+### Added
+
+-Today was a challenge, creating the Alfils Tests, but there was an inconvenience when I realized that the Alfils and the Horse were in each other's position. This forced me to edit the Board tests plus change the positions and fix everything so that the game makes sense.
+
 # [0.0.8] - 2024-08-21
 
 ### Added
