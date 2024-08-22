@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 
 
+# [0.0.8] - 2024-08-21
+
+### Added
+
+-I created the tests of the Tower's movements and they turned out very well, I did the tests with the 4 corners and also a random position in the middle of the board to see if no problem arose and it worked.
+
 # [0.0.7] - 2024-08-20
 
 ### Added
