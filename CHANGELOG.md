@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [0.1.0] - 2024-08-23
+
+### Added
+
+-Segui con la creacion de los Tests, acabo de hacer los que comprueban los movimientos de los Horse y los Kings.
+-Estoy en proceso de terminar los Test_Queen y Test_Pawn
 
 # [0.0.9] - 2024-08-22
 
