@@ -1,12 +1,19 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+
+# [0.1.1] - 2024-08-24
+
+### Added
+
+-I just finished the Queen's movement tests and they were not difficult, but I did know the correct order of all the squares she can move to.
+
 # [0.1.0] - 2024-08-23
 
 ### Added
 
--Segui con la creacion de los Tests, acabo de hacer los que comprueban los movimientos de los Horse y los Kings.
--Estoy en proceso de terminar los Test_Queen y Test_Pawn
+-I continued with the creation of the Tests, I just made the ones that check the movements of the Horses and the Kings.
+-I am in the process of finishing Test_Queen and Test_Pawn
 
 # [0.0.9] - 2024-08-22
 
