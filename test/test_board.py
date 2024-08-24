@@ -1,11 +1,11 @@
 import unittest
 from ajedrez.board import Board
-from ajedrez.pieces import Rook
-from ajedrez.pieces import Pawn
-from ajedrez.pieces import Queen
-from ajedrez.pieces import Knight
-from ajedrez.pieces import Horse
-from ajedrez.pieces import Alfils
+from ajedrez.totalpieces.rook import Rook
+from ajedrez.totalpieces.pawn import Pawn
+from ajedrez.totalpieces.queens import Queen
+from ajedrez.totalpieces.kings import Kings
+from ajedrez.totalpieces.horse import Horse
+from ajedrez.totalpieces.alfils import Alfils
 ###Test_de_board###
 
 class TestBoard(unittest.TestCase):
@@ -33,33 +33,33 @@ class TestBoard(unittest.TestCase):
         self.assertIsInstance(board.__positions__[7][7], Rook, "Debe haber una torre en (7,7)")
         self.assertEqual(board.__positions__[7][7].color, "WHITE", "La torre en (7,7) debe ser blanca")
 
-    ###ALFILES NEGROS###
-
-        self.assertIsInstance(board.__positions__[0][1], Alfils, "Debe haber un alfil en (0,1)")
-        self.assertEqual(board.__positions__[0][1].color, "BLACK", "El alfil en (0,1) debe ser negro")
-        self.assertIsInstance(board.__positions__[0][6], Alfils, "Debe haber un alfil en (0,6)")
-        self.assertEqual(board.__positions__[0][6].color, "BLACK", "El alfil en (0,6) debe ser negro")
-
-    ###ALFILES BLANCOS###
-
-        self.assertIsInstance(board.__positions__[7][1], Alfils, "Debe haber un alfil en (7,1)")
-        self.assertEqual(board.__positions__[7][1].color, "WHITE", "El alfil en (7,1) debe ser blanco")
-        self.assertIsInstance(board.__positions__[7][6], Alfils, "Debe haber un alfil en (7,6)")
-        self.assertEqual(board.__positions__[7][6].color, "WHITE", "El alfil en (7,6) debe ser blanco")
-
     ###CABALLOS NEGROS###
 
-        self.assertIsInstance(board.__positions__[0][2], Horse, "Debe haber un caballo en (0,2)")
-        self.assertEqual(board.__positions__[0][2].color, "BLACK", "El caballo en (0,2) debe ser negro")
-        self.assertIsInstance(board.__positions__[0][5], Horse, "Debe haber un caballo en (0,5)")
-        self.assertEqual(board.__positions__[0][5].color, "BLACK", "El caballo en (0,5) debe ser negro")
+        self.assertIsInstance(board.__positions__[0][1], Horse, "Debe haber un caballo en (0,1)")
+        self.assertEqual(board.__positions__[0][1].color, "BLACK", "El caballo en (0,1) debe ser negro")
+        self.assertIsInstance(board.__positions__[0][6], Horse, "Debe haber un caballo en (0,6)")
+        self.assertEqual(board.__positions__[0][6].color, "BLACK", "El caballo en (0,6) debe ser negro")
 
-    ###CABALLOS BLANCOS###                 
+    ###CABALLOS BLANCOS###
 
-        self.assertIsInstance(board.__positions__[7][2], Horse, "Debe haber un caballo en (7,2)")
-        self.assertEqual(board.__positions__[7][2].color, "WHITE", "El caballo en (7,2) debe ser blanco")
-        self.assertIsInstance(board.__positions__[7][5], Horse, "Debe haber un caballo en (7,5)")
-        self.assertEqual(board.__positions__[7][5].color, "WHITE", "El caballo en (7,5) debe ser blanco")
+        self.assertIsInstance(board.__positions__[7][1], Horse, "Debe haber un caballo en (7,1)")
+        self.assertEqual(board.__positions__[7][1].color, "WHITE", "El caballo en (7,1) debe ser blanco")
+        self.assertIsInstance(board.__positions__[7][6], Horse, "Debe haber un caballo en (7,6)")
+        self.assertEqual(board.__positions__[7][6].color, "WHITE", "El caballo en (7,6) debe ser blanco")
+
+    ###ALFILES NEGROS###
+
+        self.assertIsInstance(board.__positions__[0][2], Alfils, "Debe haber un alfil en (0,2)")
+        self.assertEqual(board.__positions__[0][2].color, "BLACK", "El alfil en (0,2) debe ser negro")
+        self.assertIsInstance(board.__positions__[0][5], Alfils, "Debe haber un alfil en (0,5)")
+        self.assertEqual(board.__positions__[0][5].color, "BLACK", "El alfil en (0,5) debe ser negro")
+
+    ###ALFILES BLANCOS###                 
+
+        self.assertIsInstance(board.__positions__[7][2], Alfils, "Debe haber un alfil en (7,2)")
+        self.assertEqual(board.__positions__[7][2].color, "WHITE", "El alfil en (7,2) debe ser blanco")
+        self.assertIsInstance(board.__positions__[7][5], Alfils, "Debe haber un alfil en (7,5)")
+        self.assertEqual(board.__positions__[7][5].color, "WHITE", "El alfil en (7,5) debe ser blanco")
 
     ###REINAS NEGRAS###
 
@@ -73,12 +73,12 @@ class TestBoard(unittest.TestCase):
 
     ###REY NEGRO###
 
-        self.assertIsInstance(board.__positions__[0][4], Knight, "Debe haber un rey en (0,4)")
+        self.assertIsInstance(board.__positions__[0][4], Kings, "Debe haber un rey en (0,4)")
         self.assertEqual(board.__positions__[0][4].color, "BLACK", "El rey en (0,4) debe ser negro")
 
     ###REY BLANCO###
 
-        self.assertIsInstance(board.__positions__[7][4], Knight, "Debe haber un rey en (7,4)")
+        self.assertIsInstance(board.__positions__[7][4], Kings, "Debe haber un rey en (7,4)")
         self.assertEqual(board.__positions__[7][4].color, "WHITE", "El rey en (7,4) debe ser blanco")
 
     ###PEONES NEGROS###

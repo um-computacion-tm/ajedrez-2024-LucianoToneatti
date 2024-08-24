@@ -2,6 +2,31 @@
 All notable changes to this project will be documented in this file.
 
 
+# [0.1.1] - 2024-08-24
+
+### Added
+
+-I just finished the Queen's movement tests and they were not difficult, but I did know the correct order of all the squares she can move to.
+
+# [0.1.0] - 2024-08-23
+
+### Added
+
+-I continued with the creation of the Tests, I just made the ones that check the movements of the Horses and the Kings.
+-I am in the process of finishing Test_Queen and Test_Pawn
+
+# [0.0.9] - 2024-08-22
+
+### Added
+
+-Today was a challenge, creating the Alfils Tests, but there was an inconvenience when I realized that the Alfils and the Horse were in each other's position. This forced me to edit the Board tests plus change the positions and fix everything so that the game makes sense.
+
+# [0.0.8] - 2024-08-21
+
+### Added
+
+-I created the tests of the Tower's movements and they turned out very well, I did the tests with the 4 corners and also a random position in the middle of the board to see if no problem arose and it worked.
+
 # [0.0.7] - 2024-08-20
 
 ### Added

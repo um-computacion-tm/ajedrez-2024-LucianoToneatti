@@ -1,9 +1,9 @@
-from ajedrez.pieces import Rook
-from ajedrez.pieces import Pawn
-from ajedrez.pieces import Queen
-from ajedrez.pieces import Knight
-from ajedrez.pieces import Horse
-from ajedrez.pieces import Alfils
+from ajedrez.totalpieces.rook import Rook
+from ajedrez.totalpieces.pawn import Pawn
+from ajedrez.totalpieces.queens import Queen
+from ajedrez.totalpieces.kings import Kings
+from ajedrez.totalpieces.horse import Horse
+from ajedrez.totalpieces.alfils import Alfils
 class Board:
 
     def __init__(self): # Crear un tablero de 8x8 
@@ -22,19 +22,19 @@ class Board:
         self.__positions__[7][0] = Rook("WHITE") #White
 
 
-        #Le damos posiciones a los Alfiles negros y blancos#
-
-        self.__positions__[0][1] = Alfils("BLACK") #Black
-        self.__positions__[0][6] = Alfils("BLACK") #Black
-        self.__positions__[7][1] = Alfils("WHITE") #White 
-        self.__positions__[7][6] = Alfils("WHITE") #White
-
         #Le damos posiciones a los Caballos negros y blancos#
 
-        self.__positions__[0][2] = Horse("BLACK") #Black
-        self.__positions__[0][5] = Horse("BLACK") #Black
-        self.__positions__[7][2] = Horse("WHITE") #White 
-        self.__positions__[7][5] = Horse("WHITE") #White
+        self.__positions__[0][1] = Horse("BLACK") #Black
+        self.__positions__[0][6] = Horse("BLACK") #Black
+        self.__positions__[7][1] = Horse("WHITE") #White 
+        self.__positions__[7][6] = Horse("WHITE") #White
+
+        #Le damos posiciones a los Alfiles negros y blancos#
+
+        self.__positions__[0][2] = Alfils("BLACK") #Black
+        self.__positions__[0][5] = Alfils("BLACK") #Black
+        self.__positions__[7][2] = Alfils("WHITE") #White 
+        self.__positions__[7][5] = Alfils("WHITE") #White
 
         #Le damos posiciones a los Peones negros y blancos#
 
@@ -50,8 +50,8 @@ class Board:
 
         #Le damos posiciones a los Reyes negros y blancos#
 
-        self.__positions__[0][4] = Knight("BLACK") #Black
-        self.__positions__[7][4] = Knight("WHITE") #White
+        self.__positions__[0][4] = Kings("BLACK") #Black
+        self.__positions__[7][4] = Kings("WHITE") #White
 
 
     #Sirve para obtener la pieza
@@ -86,10 +86,10 @@ class Board:
             return []
         
     #Sirve para obtener los movimientos de los reyes para luego usarlos en el tablero
-    def get_Knight_moves(self, row, col):
-        knight = self.get_piece(row, col)
-        if isinstance(knight, Knight):
-            return knight.movimientos_basicos_de_reyes(row, col)
+    def get_Kings_moves(self, row, col):
+        kings = self.get_piece(row, col)
+        if isinstance(kings, Kings):
+            return kings.movimientos_basicos_de_reyes(row, col)
         else:
             return []
         
