@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [0.1.3] - 2024-08-26
+
+### Added
+
+This time I added what we did with the teacher in class, on the Cli and Chess file, in which we added the movements, the color shifts and soon I will add the Exceptions.
 
 # [0.1.2] - 2024-08-25
 
