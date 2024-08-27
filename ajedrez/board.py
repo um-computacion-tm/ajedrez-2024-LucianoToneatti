@@ -59,6 +59,9 @@ class Board:
     def get_piece(self, row, col):
         return self.__positions__[row][col]
     
+    def set_piece(self, row, col, piece): #Coloca las piezas en su posicion
+        self.__positions__[row][col] = piece
+    
     #Sirve para obtener los movimientos de las torres para luego usarlos en el tablero
 
     def get_rook_moves(self, row, col): 

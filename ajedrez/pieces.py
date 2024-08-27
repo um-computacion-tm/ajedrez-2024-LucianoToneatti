@@ -7,7 +7,17 @@ class Piece:    #Clase Padre
     def color(self):
         return self.__color__
     
+    def __str__ (self):
+
+        if self.__color__ == "BLACK":
+            return self.black_str
+        else:
+            return self.white_str
+            
 #############
+
+    
+        
 
 
 

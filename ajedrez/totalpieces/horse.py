@@ -2,6 +2,10 @@ from ajedrez.pieces import Piece
 
 ###CABALLOS###
 class Horse(Piece):
+
+    black_str ="♘" #knight black
+    white_str ="♞"  #knight white
+    
     #No se me complico hacer el codigo de los movimientos del caballo porque 
     # sigue el formato de los Reyes con la diferencia que las casillas que ocupa son diferentes
     def __init__(self, color):

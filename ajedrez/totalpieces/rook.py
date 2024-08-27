@@ -2,6 +2,11 @@ from ajedrez.pieces import Piece
 
 ###TORRES###
 class Rook(Piece):     
+
+    black_str ="♖"
+    white_str ="♜"
+    
+
     def __init__(self, color):
         super().__init__(color) 
 

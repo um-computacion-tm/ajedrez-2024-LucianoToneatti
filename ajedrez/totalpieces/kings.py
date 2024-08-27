@@ -3,6 +3,10 @@ from ajedrez.pieces import Piece
 ###REYES###
 class Kings(Piece):
     
+    black_str ="♔"
+    white_str ="♚"
+    
+
     def __init__(self, color):
         super().__init__(color)
 

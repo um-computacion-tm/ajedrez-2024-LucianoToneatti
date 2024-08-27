@@ -5,6 +5,10 @@ from ajedrez.totalpieces.alfils import Alfils
 ###REINAS###
 class Queen(Piece): #Al parecer a los test no le gustan las herencias multiples entonces tuve que arreglar mi clase Queen
 
+    black_str ="♕"
+    white_str ="♛"
+    
+
     def __init__(self, color):
         super().__init__(color)
 
