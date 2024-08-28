@@ -5,20 +5,20 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
--Añadí los test y refactorice mi codigo de Rook para que pueda ademas de moverse capturar y colisionar.
+-I added the tests and refactored my Rook code so that it can also move, capture and collide.
 
- -Para que funcione mi codigo de Rook y que pueda ademas de moverse colisionar y capturar
-    tuve que hacer grandes cambios en mi codigo y dividirlo en 3 funciones principales
-    (movimientos basicos, validar colision, validar captura)
-    Entonces en vez de hacer que recorra la fila y la columna, separe en 4 secciones 
-    izquierda derecha arriba y abajo.
+ -So that my Rook code works and that in addition to moving, colliding and capturing
+    I had to make big changes to my code and split it into 3 main functions
+    (basic movements, validate collision, validate capture)
+    So instead of making it go down the row and column, separate it into 4 sections 
+    left right up and down.
 
-    Primero defino el rango que va a recorrer y cada cuanto y hasta donde.
-    Segundo valido colisiones posibles.
-    Tercero valido capturas.
-    Cuarto devuelve todos los movimientos.
+    First I define the range it will cover and how often and to what extent.
+    Second valid possible collisions.
+    Third valid captures.
+    Fourth returns all moves.
 
-    Aunque al hacer estos cambios y al tener a mi pieza Queen relacionada con los movimientos de la Rook ahora no me andan los Test_Queens, por lo que voy a intentar correguirlo en los siguientes avances.
+    Although by making these changes and having my Queen piece related to the Rook's movements, the Test_Queens are now not working for me, so I am going to try to correct it in the following previews.
 
 
 # [0.1.4] - 2024-08-27
