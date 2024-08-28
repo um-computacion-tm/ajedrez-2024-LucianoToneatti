@@ -1,6 +1,26 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [0.1.5] - 2024-08-28
+
+### Added
+
+-Añadí los test y refactorice mi codigo de Rook para que pueda ademas de moverse capturar y colisionar.
+
+ -Para que funcione mi codigo de Rook y que pueda ademas de moverse colisionar y capturar
+    tuve que hacer grandes cambios en mi codigo y dividirlo en 3 funciones principales
+    (movimientos basicos, validar colision, validar captura)
+    Entonces en vez de hacer que recorra la fila y la columna, separe en 4 secciones 
+    izquierda derecha arriba y abajo.
+
+    Primero defino el rango que va a recorrer y cada cuanto y hasta donde.
+    Segundo valido colisiones posibles.
+    Tercero valido capturas.
+    Cuarto devuelve todos los movimientos.
+
+    Aunque al hacer estos cambios y al tener a mi pieza Queen relacionada con los movimientos de la Rook ahora no me andan los Test_Queens, por lo que voy a intentar correguirlo en los siguientes avances.
+
+
 # [0.1.4] - 2024-08-27
 
 ### Added
