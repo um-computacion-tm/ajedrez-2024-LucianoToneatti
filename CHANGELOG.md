@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+
+# [0.1.6] - 2024-08-29
+
+### Added
+
+-Add the Alfils Tests to then implement the Alfils' movements and then do the Queens tests and its code since Queens depends on Rook and Alfils.
+
+
 # [0.1.5] - 2024-08-28
 
 ### Added
