@@ -2,10 +2,19 @@
 All notable changes to this project will be documented in this file.
 
 
+# [0.1.7] - 2024-08-30
+
+### Added
+
+-I completed the Capture and Collision functions of "Alfils" and they fit perfectly with the tests I did in the last Commit. Now with Rook and Alfils finished I can continue with Queens.
+
+
+
 # [0.1.6] - 2024-08-29
 
 ### Added
 
+-The Obstruction and Capture tests
 -Add the Alfils Tests to then implement the Alfils' movements and then do the Queens tests and its code since Queens depends on Rook and Alfils.
 
 
