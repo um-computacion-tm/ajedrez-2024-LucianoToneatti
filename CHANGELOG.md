@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [0.1.8] - 2024-08-31
+
+### Added
+
+-Add the Queens Tests and now all that remains is to correct some small details of the functions so that the tests run correctly and with that the Queen piece would finish.
+
 
 # [0.1.7] - 2024-08-30
 
