@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [0.1.9] - 2024-09-01
+
+### Added
+
+-Finish Queens' movements, now she has passed all the tests and I am ready to continue with the capture and collision mechanics of the "King, Horse and Pawn" pieces.
+
 # [0.1.8] - 2024-08-31
 
 ### Added
