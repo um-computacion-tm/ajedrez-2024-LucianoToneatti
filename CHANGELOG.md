@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+
+# [0.2.0] - 2024-09-02
+
+### Added
+
+-Today I did the King piece tests which check the capture of pieces of the opposite color and collision with pieces of the same color.
+
+
 # [0.1.9] - 2024-09-01
 
 ### Added
