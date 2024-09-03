@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 
 
+# [0.2.1] - 2024-09-03
+
+### Added
+
+
+-Esta noche termine de refactorizar el codigo de la pieza King para que de esta manera pase los test correctamente, lo que agregue fueron las funciones "validar_captura" y "validar_colision" y edite la funcion "movimientos_basicos_de_reyes".
+
 # [0.2.0] - 2024-09-02
 
 ### Added
