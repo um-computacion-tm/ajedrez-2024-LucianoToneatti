@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [0.2.2] - 2024-09-04
+
+### Added
+
+-Today I could refactory the Horse tests inclduding validar_colision and validar_captura with the aim of be able to add Horse movements in the future.
 
 # [0.2.1] - 2024-09-03
 
