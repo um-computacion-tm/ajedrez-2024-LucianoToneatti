@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [0.2.3] - 2024-09-05
+
+### Added
+
+-Apply the new functions to the Horse piece and it can now capture and collide correctly, and it passed all the tests I did yesterday.
+
 # [0.2.2] - 2024-09-04
 
 ### Added
