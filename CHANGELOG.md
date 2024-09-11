@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [0.2.4] - 2024-09-10
+
+### Added
+
+-I added a couple of Tests for the pawn movements but it is getting complicated for me to do the movements correctly, especially the capture and the collision.
+
 # [0.2.3] - 2024-09-05
 
 ### Added
