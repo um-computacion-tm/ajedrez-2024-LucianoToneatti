@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [0.2.5] - 2024-09-11
+
+### Added
+
+-I started to try to add the movements of the capture and collision pawn, the problem is that they are still not 100% working.
+
 # [0.2.4] - 2024-09-10
 
 ### Added
