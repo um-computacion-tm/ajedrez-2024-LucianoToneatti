@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [0.2.6] - 2024-09-12
+
+### Added
+
+-After many complications I managed to get the Pawn capture to work and I know it because all the Tests that I did previously run, that does not mean that perhaps in the future I will add more tests.
+
 # [0.2.5] - 2024-09-11
 
 ### Added

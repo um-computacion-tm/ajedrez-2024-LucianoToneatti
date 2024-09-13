@@ -55,6 +55,15 @@ class Pawn(Piece):
         for direc_row, direc_col in direcciones:
             if self.es_movimiento_valido(row, col, direc_row, direc_col, board):
                 moves.append((row + direc_row, col + direc_col))
+
+        # Capturas en diagonales #
+        direcciones_captura = [(1, -1), (1, 1)] if self.__color__ == "BLACK" else [(-1, -1), (-1, 1)]
+        for direc_row, direc_col in direcciones_captura:
+            nueva_fila, nueva_columna = row + direc_row, col + direc_col
+            if 0 <= nueva_fila < 8 and 0 <= nueva_columna < 8 and self.validar_captura(nueva_fila, nueva_columna, board):
+                moves.append((nueva_fila, nueva_columna))
+        ##########################
+        
         if not self.primer_movimiento_realizado:
             self.primer_movimiento_realizado = True
         return moves
