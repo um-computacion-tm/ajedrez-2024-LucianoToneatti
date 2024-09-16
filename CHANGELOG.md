@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [0.2.7] - 2024-09-15
+
+### Added
+
+-Add the exceptions.py file for exceptions that players may have.
+
+
 # [0.2.6] - 2024-09-12
 
 ### Added
