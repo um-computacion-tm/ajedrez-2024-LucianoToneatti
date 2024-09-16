@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [0.2.8] - 2024-09-16
+
+### Added
+
+-Added the exceptions to the cli and added the get for "Horse" and "Pawn". And a str that returns the board to you in the form of a chain and adds the exception to the get piece for when a piece wants to leave the board.
+
 # [0.2.7] - 2024-09-15
 
 ### Added

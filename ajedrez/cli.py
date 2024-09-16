@@ -1,4 +1,5 @@
 from ajedrez.chess import Chess
+from ajedrez.exceptions import InvalidMove, InvalidTurn, EmptyPosition
 
 def main():
 
@@ -9,6 +10,7 @@ def main():
 def play(chess):
 
     try:
+
         print(chess.show_board())
         print("turn: ", chess.turn)
 
@@ -17,12 +19,26 @@ def play(chess):
         to_row = int(input("To Row: "))
         to_col = int(input("To Col: "))
 
-        chess.move(from_row,from_col,to_row,to_col)
+        chess.move(
+            from_row,
+            from_col,
+            to_row,
+            to_col,
+
+        )
+
+    except InvalidTurn as e:
+        print(e)
+
+    except EmptyPosition as e:
+        print(e)
+
+    except InvalidMove as e:
+        print(e)
 
     except Exception as e:
         print("error", e)
 
+
 if __name__ == '__main__':
-
     main()
-
