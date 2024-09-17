@@ -73,62 +73,22 @@ class Board:
     
     def get_piece(self, row, col):
         if not (
-            0 <= row < 8 or 0 <= col < 8
-        ):
+            0 <= row < 8 or 0 <= col < 8):
             raise OutOfBoard()
         return self.__positions__[row][col]
     
     def set_piece(self, row, col, piece): #Coloca las piezas en su posicion
         self.__positions__[row][col] = piece
     
-    #Sirve para obtener los movimientos de las torres para luego usarlos en el tablero
+    def remove_piece(self, row, col):
+        self.__positions__[row][col] = None
 
-    def get_rook_moves(self, row, col): 
-        rook = self.get_piece(row, col)
-        if isinstance(rook, Rook):
-            return rook.movimientos_basicos_de_torres(row, col)
+    def get_valid_moves(self, row, col):
+        piece = self.get_piece(row, col)
+        if piece is not None:
+            return piece.valid_moves(row, col, self.__positions__)
         else:
             return []
-        
-    #Sirve para obtener los movimientos de los alfiles para luego usarlos en el tablero
-
-    def get_alfils_moves(self, row, col):
-        alfil = self.get_piece(row, col)
-        if isinstance(alfil, Alfils):
-            return alfil.movimientos_basicos_de_alfiles(row, col)
-        else:
-            return []
-    
-    #Sirve para obtener los movimientos de las reinas para luego usarlos en el tablero
-    def get_Queen_moves(self, row, col):
-        queen = self.get_piece(row, col)
-        if isinstance(queen, Queen):
-            return queen.movimientos_basicos_de_reinas(row, col)
-        else:
-            return []
-        
-    #Sirve para obtener los movimientos de los reyes para luego usarlos en el tablero
-    def get_Kings_moves(self, row, col):
-        kings = self.get_piece(row, col)
-        if isinstance(kings, Kings):
-            return kings.movimientos_basicos_de_reyes(row, col)
-        else:
-            return []
-        
-    def get_Horse_moves(self, row, col):
-        horse = self.get_piece(row, col)
-        if isinstance(horse, Horse):
-            return horse.movimientos_basicos_de_caballos(row, col)
-        else:
-            return []
-    
-    def get_pawn_moves(self, row, col):
-        pawn = self.get_piece(row, col)
-        if isinstance(pawn, Pawn):
-            return pawn.movimientos_basicos_de_peones(row, col)
-        else:
-            return []
-        
     #############################
 
     def move(self, from_row, from_col, to_row, to_col):

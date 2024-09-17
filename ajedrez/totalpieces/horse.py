@@ -22,7 +22,7 @@ class Horse(Piece):
         return pieza is not None and pieza.__color__ != self.__color__
 
 
-    def movimientos_basicos_de_caballos(self, row, col, board):
+    def valid_moves(self, row, col, board):
 
         moves = []
         direcciones = [(-2, -1), (-2, 1), (-1, -2), (-1, 2), (1, -2), (1, 2), (2, -1), (2, 1)]

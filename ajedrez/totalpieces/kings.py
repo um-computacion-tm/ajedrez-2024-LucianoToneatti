@@ -21,7 +21,7 @@ class Kings(Piece):
         return pieza is not None and pieza.__color__ != self.__color__
 
 
-    def movimientos_basicos_de_reyes(self, row, col, board):
+    def valid_moves(self, row, col, board):
 
         moves = []
         direcciones = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
@@ -37,6 +37,5 @@ class Kings(Piece):
                         moves.append((nueva_fila, nueva_columna))
 
         return moves
-
 
 #############

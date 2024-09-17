@@ -48,7 +48,7 @@ class Pawn(Piece):
                 return False
         return True
 
-    def movimientos_basicos_de_peones(self, row, col, board):
+    def valid_moves(self, row, col, board):
         # Obtiene movimientos básicos del peón según posición y tablero.
         moves = []
         direcciones = self.obtener_direcciones()
@@ -67,3 +67,5 @@ class Pawn(Piece):
         if not self.primer_movimiento_realizado:
             self.primer_movimiento_realizado = True
         return moves
+    
+    #########################

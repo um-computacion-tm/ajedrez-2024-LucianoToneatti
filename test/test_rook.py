@@ -19,7 +19,7 @@ class TestRook(unittest.TestCase):
         movimientos_esperados_11 = [(0, 1), (2, 1), (3, 1), (4, 1), (5, 1), 
                                     (6, 1), (7, 1), (1, 0), (1, 2), (1, 3),
                                     (1, 4), (1, 5), (1, 6), (1, 7)]
-        self.assertEqual(self.rook_black.movimientos_basicos_de_torres(1, 1, self.board), movimientos_esperados_11)
+        self.assertEqual(self.rook_black.valid_moves(1, 1, self.board), movimientos_esperados_11)
     
     def test_movimientos_basicos_de_torres_con_obstrucciones(self):
         # Colocamos la torre en la posición (3, 3) y una pieza compañera en (3, 5)
@@ -31,7 +31,7 @@ class TestRook(unittest.TestCase):
 
 
         movimientos_esperados_33 = [(2, 3), (4, 3), (3, 2), (3, 4)]
-        self.assertEqual(self.rook_black.movimientos_basicos_de_torres(3, 3, self.board), movimientos_esperados_33)
+        self.assertEqual(self.rook_black.valid_moves(3, 3, self.board), movimientos_esperados_33)
 
     def test_movimientos_basicos_de_torres_con_captura(self):
         # Colocamos la torre en la posición (3, 3) y un enemigo en (3, 5)
@@ -42,7 +42,7 @@ class TestRook(unittest.TestCase):
         self.board[5][3] = Piece("WHITE")
 
         movimientos_esperados_33 = [(2, 3), (1, 3), (4, 3), (5, 3), (3, 2), (3, 1), (3, 4), (3, 5)]  # Se captura en (3, 5)
-        self.assertEqual(self.rook_black.movimientos_basicos_de_torres(3, 3, self.board), movimientos_esperados_33)
+        self.assertEqual(self.rook_black.valid_moves(3, 3, self.board), movimientos_esperados_33)
 
     def test_captura_y_colision(self):
 
@@ -54,7 +54,7 @@ class TestRook(unittest.TestCase):
 
         movimientos_esperados_52 = [(4, 2), (3, 2), (2, 2), (6, 2),
                                     (5, 1), (5, 0), (5, 3), (5, 4),(5, 5)]
-        self.assertEqual(self.rook_white.movimientos_basicos_de_torres(5, 2, self.board), movimientos_esperados_52)
+        self.assertEqual(self.rook_white.valid_moves(5, 2, self.board), movimientos_esperados_52)
 
 
 

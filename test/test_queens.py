@@ -19,7 +19,7 @@ class TestQueens(unittest.TestCase):
                                     (7, 5), (7, 6), (7, 7),(6, 2), (5, 1), (4, 0),
                                     (6, 4), (5, 5), (4, 6), (3, 7)]
         
-        self.assertEqual(self.queen_black.movimientos_basicos_de_reinas(7, 3, self.board), movimientos_esperados_73)
+        self.assertEqual(self.queen_black.valid_moves(7, 3, self.board), movimientos_esperados_73)
 
     #Muy dificil de contar todas las posibilidades de movimientos y luego ordenarlas de manera correcta
     # pero funciono!!!!. Ahora aunque no quiera voy a probar un lugar random del tablero.
@@ -34,7 +34,7 @@ class TestQueens(unittest.TestCase):
 
         movimientos_esperados_73 = [(6, 3), (5, 3), (7, 2), (7, 1), (7, 0), (7, 4), 
                                     (6, 2), (5, 1), (6, 4), (5, 5)]
-        self.assertEqual(self.queen_white.movimientos_basicos_de_reinas(7, 3, self.board), movimientos_esperados_73)
+        self.assertEqual(self.queen_white.valid_moves(7, 3, self.board), movimientos_esperados_73)
 
 
     def test_movimientos_basicos_de_reinas_con_captura(self):
@@ -49,7 +49,7 @@ class TestQueens(unittest.TestCase):
                                     (6, 5), (6, 4), (6, 3), (6, 2), (6, 1), 
                                     (6, 0), (6, 7), (5, 5), (4, 4), (3, 3),
                                     (2, 2), (5, 7), (7, 5), (7, 7)]
-        self.assertEqual(self.queen_black.movimientos_basicos_de_reinas(6, 6, self.board), movimientos_esperados_66)
+        self.assertEqual(self.queen_black.valid_moves(6, 6, self.board), movimientos_esperados_66)
 
     #ME FUNCIONAAAAAA QUE LOCURAAAAA 
 

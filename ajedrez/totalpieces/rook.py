@@ -20,7 +20,7 @@ class Rook(Piece):
         pieza = board[row][col]
         return pieza is not None and pieza.__color__ != self.__color__
 
-    def movimientos_basicos_de_torres(self, row, col, board):
+    def valid_moves(self, row, col, board):
 
         moves = []
 
@@ -61,6 +61,9 @@ class Rook(Piece):
             moves.append((row, c))
 
         return moves
+
+
+    ########################
 
         #Para que funcione mi codigo de Rook y que pueda ademas de moverse colisionar y capturar
         #   tuve que hacer grandes cambios en mi codigo y dividirlo en 3 funciones principales

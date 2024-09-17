@@ -17,7 +17,7 @@ class TestHorse(unittest.TestCase):
 
         movimientos_esperados_01 = [(1,3), (2,0),(2,2)]
 
-        self.assertEqual(self.horse_white.movimientos_basicos_de_caballos(0, 1, self.board), movimientos_esperados_01)
+        self.assertEqual(self.horse_white.valid_moves(0, 1, self.board), movimientos_esperados_01)
 
     #Me di cuenta que con una prueba o algunas puedo saber si el programa funciona o no
     #Entonces no hace falta que pruebe cada caballo en este caso, pero si voy a probar alguna posicion 
@@ -29,7 +29,7 @@ class TestHorse(unittest.TestCase):
 
         movimientos_esperados_44 = [(2, 3), (2, 5), (3, 2), (3, 6), (5, 2), (5, 6), (6, 3), (6, 5)]
 
-        self.assertEqual(self.horse_black.movimientos_basicos_de_caballos(4, 4, self.board), movimientos_esperados_44)
+        self.assertEqual(self.horse_black.valid_moves(4, 4, self.board), movimientos_esperados_44)
 
     def test_movimientos_basicos_de_caballos_con_colision(self):
 
@@ -45,7 +45,7 @@ class TestHorse(unittest.TestCase):
 
         movimientos_esperados_44 = []
 
-        self.assertEqual(self.horse_white.movimientos_basicos_de_caballos(4, 4, self.board), movimientos_esperados_44)
+        self.assertEqual(self.horse_white.valid_moves(4, 4, self.board), movimientos_esperados_44)
 
     def test_movimientos_basicos_de_caballos_con_captura(self):
         self.board[4][4] = self.horse_black

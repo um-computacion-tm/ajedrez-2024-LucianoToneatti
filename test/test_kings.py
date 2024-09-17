@@ -16,7 +16,7 @@ class TestKings(unittest.TestCase):
 
         movimientos_esperados_74 = [(6,3),(6,4),(6,5),(7,3),(7,5)]
 
-        self.assertEqual(self.king_black.movimientos_basicos_de_reyes(7, 4, self.board), movimientos_esperados_74)
+        self.assertEqual(self.king_black.valid_moves(7, 4, self.board), movimientos_esperados_74)
 
     def test_movimientos_basicos_de_reyes_con_colision(self):
 
@@ -29,7 +29,7 @@ class TestKings(unittest.TestCase):
 
         movimientos_esperados_74 = []
 
-        self.assertEqual(self.king_black.movimientos_basicos_de_reyes(7, 4, self.board), movimientos_esperados_74)
+        self.assertEqual(self.king_black.valid_moves(7, 4, self.board), movimientos_esperados_74)
 
     def test_movimientos_basicos_de_reyes_con_captura(self):
 
@@ -42,7 +42,7 @@ class TestKings(unittest.TestCase):
 
         movimientos_esperados_74 = [(6,3),(6,4),(6,5),(7,3),(7,5)]
 
-        self.assertEqual(self.king_black.movimientos_basicos_de_reyes(7, 4, self.board), movimientos_esperados_74)
+        self.assertEqual(self.king_black.valid_moves(7, 4, self.board), movimientos_esperados_74)
 
 
 

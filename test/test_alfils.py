@@ -17,7 +17,7 @@ class TestAlfils(unittest.TestCase):
         self.board[0][2] = self.alfils_black
         # Movimientos cruzados de la posición (0, 2) NEGROS
         movimientos_esperados_02 = [(1, 1), (2, 0), (1, 3), (2, 4), (3, 5), (4, 6), (5, 7)]
-        self.assertEqual(self.alfils_black.movimientos_basicos_de_alfiles(0, 2, self.board), movimientos_esperados_02)
+        self.assertEqual(self.alfils_black.valid_moves(0, 2, self.board), movimientos_esperados_02)
 
     def test_movimientos_basicos_de_alfiles_con_obstrucciones(self):
 
@@ -28,7 +28,7 @@ class TestAlfils(unittest.TestCase):
 
         # Movimientos cruzados de la posición (0, 5) NEGROS
         movimentos_esperados_44 = [(3, 3), (3, 5), (2, 6), (1, 7), (5, 5), (6, 6)]
-        self.assertEqual(self.alfils_black.movimientos_basicos_de_alfiles(4, 4, self.board), movimentos_esperados_44)
+        self.assertEqual(self.alfils_black.valid_moves(4, 4, self.board), movimentos_esperados_44)
 
     def test_movimientos_basicos_de_alfiles_con_captura(self):
 
@@ -41,7 +41,7 @@ class TestAlfils(unittest.TestCase):
         #Movimientos cruzados de la posición (7, 2) BLANCOS
         movimientos_esperados_44 = [(3, 3),(2, 2), (3, 5), (2, 6), 
                                     (1, 7),(5, 3), (5, 5), (6, 6), (7, 7)]
-        self.assertEqual(self.alfils_black.movimientos_basicos_de_alfiles(4, 4, self.board), movimientos_esperados_44)
+        self.assertEqual(self.alfils_black.valid_moves(4, 4, self.board), movimientos_esperados_44)
 
     #FUNCIONAAAA
 

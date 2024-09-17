@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [0.2.9] - 2024-09-17
+
+### Added
+
+-I made several changes to my code to make it shorter and more understandable, I changed all the names of the basic_moves_rook basic_moves_alfil etc functions to valid_moves, this way I was able to refactor the get of each piece in Board and only creating one called get_valid_moves.
+-When changing the names of the basic movements I also had to correct the name in the tests of each piece.
+
 # [0.2.8] - 2024-09-16
 
 ### Added
