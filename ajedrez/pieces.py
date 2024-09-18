@@ -15,15 +15,3 @@ class Piece:    #Clase Padre
             return self.white_str
             
 #############
-
-    
-        
-
-
-
-
-
-
-
-
-

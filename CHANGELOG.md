@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [0.3.0] - 2024-09-18
+
+### Added
+
+-I wanted to test the game to see how it went and if the exceptions worked but in order to get the game running I had to remove the cli.py from the folder. I also added more tests to the "Board" to check that it would work correctly. Anyway, I'm having an error when I want to move the pieces and I'm trying to solve it.
+
 # [0.2.9] - 2024-09-17
 
 ### Added

@@ -2,7 +2,7 @@ import unittest
 
 from unittest.mock import patch
 from ajedrez.chess import Chess
-from ajedrez.cli import play
+from cli import play
 
 class TestCli(unittest.TestCase):
 
