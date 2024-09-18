@@ -1,6 +1,144 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [0.3.0] - 2024-09-18
+
+### Added
+
+-I wanted to test the game to see how it went and if the exceptions worked but in order to get the game running I had to remove the cli.py from the folder. I also added more tests to the "Board" to check that it would work correctly. Anyway, I'm having an error when I want to move the pieces and I'm trying to solve it.
+
+# [0.2.9] - 2024-09-17
+
+### Added
+
+-I made several changes to my code to make it shorter and more understandable, I changed all the names of the basic_moves_rook basic_moves_alfil etc functions to valid_moves, this way I was able to refactor the get of each piece in Board and only creating one called get_valid_moves.
+-When changing the names of the basic movements I also had to correct the name in the tests of each piece.
+
+# [0.2.8] - 2024-09-16
+
+### Added
+
+-Added the exceptions to the cli and added the get for "Horse" and "Pawn". And a str that returns the board to you in the form of a chain and adds the exception to the get piece for when a piece wants to leave the board.
+
+# [0.2.7] - 2024-09-15
+
+### Added
+
+-Add the exceptions.py file for exceptions that players may have.
+
+
+# [0.2.6] - 2024-09-12
+
+### Added
+
+-After many complications I managed to get the Pawn capture to work and I know it because all the Tests that I did previously run, that does not mean that perhaps in the future I will add more tests.
+
+# [0.2.5] - 2024-09-11
+
+### Added
+
+-I started to try to add the movements of the capture and collision pawn, the problem is that they are still not 100% working.
+
+# [0.2.4] - 2024-09-10
+
+### Added
+
+-I added a couple of Tests for the pawn movements but it is getting complicated for me to do the movements correctly, especially the capture and the collision.
+
+# [0.2.3] - 2024-09-05
+
+### Added
+
+-Apply the new functions to the Horse piece and it can now capture and collide correctly, and it passed all the tests I did yesterday.
+
+# [0.2.2] - 2024-09-04
+
+### Added
+
+-Today I could refactory the Horse tests inclduding validar_colision and validar_captura with the aim of be able to add Horse movements in the future.
+
+# [0.2.1] - 2024-09-03
+
+### Added
+
+
+-Tonight I finished refactoring the code of the King piece so that it passes the tests correctly. What I added were the "validate_capture" and "validate_collision" functions and edited the "basic_movements_of_kings" function.
+
+# [0.2.0] - 2024-09-02
+
+### Added
+
+-Today I did the King piece tests which check the capture of pieces of the opposite color and collision with pieces of the same color.
+
+
+# [0.1.9] - 2024-09-01
+
+### Added
+
+-Finish Queens' movements, now she has passed all the tests and I am ready to continue with the capture and collision mechanics of the "King, Horse and Pawn" pieces.
+
+# [0.1.8] - 2024-08-31
+
+### Added
+
+-Add the Queens Tests and now all that remains is to correct some small details of the functions so that the tests run correctly and with that the Queen piece would finish.
+
+
+# [0.1.7] - 2024-08-30
+
+### Added
+
+-I completed the Capture and Collision functions of "Alfils" and they fit perfectly with the tests I did in the last Commit. Now with Rook and Alfils finished I can continue with Queens.
+
+
+
+# [0.1.6] - 2024-08-29
+
+### Added
+
+-The Obstruction and Capture tests
+-Add the Alfils Tests to then implement the Alfils' movements and then do the Queens tests and its code since Queens depends on Rook and Alfils.
+
+
+# [0.1.5] - 2024-08-28
+
+### Added
+
+-I added the tests and refactored my Rook code so that it can also move, capture and collide.
+
+ -So that my Rook code works and that in addition to moving, colliding and capturing
+    I had to make big changes to my code and split it into 3 main functions
+    (basic movements, validate collision, validate capture)
+    So instead of making it go down the row and column, separate it into 4 sections 
+    left right up and down.
+
+    First I define the range it will cover and how often and to what extent.
+    Second valid possible collisions.
+    Third valid captures.
+    Fourth returns all moves.
+
+    Although by making these changes and having my Queen piece related to the Rook's movements, the Test_Queens are now not working for me, so I am going to try to correct it in the following previews.
+
+
+# [0.1.4] - 2024-08-27
+
+### Added
+
+-Today I added the symbols that the pieces will use in each position they occupy, the symbols are of this style: ♖♕♔♘.
+
+
+# [0.1.3] - 2024-08-26
+
+### Added
+
+-This time I added what we did with the teacher in class, on the Cli and Chess file, in which we added the movements, the color shifts and soon I will add the Exceptions.
+
+# [0.1.2] - 2024-08-25
+
+### Added
+
+-I added the Pawn Tests and with that I finished testing all the pieces.
+
 
 # [0.1.1] - 2024-08-24
 

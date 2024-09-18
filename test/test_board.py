@@ -6,6 +6,9 @@ from ajedrez.totalpieces.queens import Queen
 from ajedrez.totalpieces.kings import Kings
 from ajedrez.totalpieces.horse import Horse
 from ajedrez.totalpieces.alfils import Alfils
+
+from ajedrez.exceptions import OutOfBoard
+
 ###Test_de_board###
 
 class TestBoard(unittest.TestCase):
@@ -99,6 +102,64 @@ class TestBoard(unittest.TestCase):
                             self.assertIsNone(board.get_piece(i, j), f"La posicion ({i},{j}) debe estar vacia")
     ### Debe haber una mejor manera de comprobar que las casillas estan bacias pero a mi solo se me ocurrio 
     ### poner todas las casillas iniciales y que esten ocupadas por alguna ficha.
+
+
+    def test_str_board(self):
+        board = Board()
+        self.assertEqual(
+            str(board),
+            (
+                "♖♘♗♕♔♗♘♖\n"
+                "♙♙♙♙♙♙♙♙\n"
+                "        \n"
+                "        \n"
+                "        \n"
+                "        \n"
+                "♟♟♟♟♟♟♟♟\n"
+                "♜♞♝♛♚♝♞♜\n"
+            )
+        )
+
+    def test_move(self):
+        board = Board(for_test=True)
+        rook = Rook(color='BLACK')
+        board.set_piece(0, 0, rook)
+
+        board.move(
+            from_row=0,
+            from_col=0,
+            to_row=0,
+            to_col=1,
+        )
+
+        self.assertIsInstance(
+            board.get_piece(0, 1),
+            Rook,
+        )
+        self.assertEqual(
+            str(board),
+            (
+                " ♖      \n"
+                "        \n"
+                "        \n"
+                "        \n"
+                "        \n"
+                "        \n"
+                "        \n"
+                "        \n"
+            )
+        )
+
+    def test_get_piece_out_of_range(self):
+        board = Board(for_test=True)
+
+        with self.assertRaises(OutOfBoard) as exc:
+            board.get_piece(10, 10)
+
+        self.assertEqual(
+            exc.exception.message,
+            "La posicion indicada se encuentra fuera del tablero"
+        )
 
 
 
