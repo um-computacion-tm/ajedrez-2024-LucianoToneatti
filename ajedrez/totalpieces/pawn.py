@@ -13,12 +13,12 @@ class Pawn(Piece):
 
     def validar_colision(self, nueva_fila, nueva_columna, board):
 
-        pieza = board[nueva_fila][nueva_columna]
+        pieza = board.get_piece(nueva_fila, nueva_columna)
         return pieza is not None and pieza.__color__ == self.__color__
 
     def validar_captura(self, row, col, board):
         #Verifica si la torre puede capturar una pieza enemiga en la posición dada
-        pieza = board[row][col]
+        pieza = board.get_piece(row, col)
         return pieza is not None and pieza.__color__ != self.__color__
 
 
@@ -44,7 +44,7 @@ class Pawn(Piece):
             return False
         if abs(direc_row) == 2: #me da el valor absoluto sin importar el signo
             fila_intermedia = row + direc_row // 2 #Nos da la mitad de la distancia q se mueve el peón
-            if board[fila_intermedia][col] is not None:
+            if board.get_piece(fila_intermedia, col) is not None:
                 return False
         return True
 
