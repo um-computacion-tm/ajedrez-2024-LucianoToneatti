@@ -86,7 +86,7 @@ class Board:
     def get_valid_moves(self, row, col):
         piece = self.get_piece(row, col)
         if piece is not None:
-            return piece.valid_moves(row, col, self.__positions__)
+            return piece.valid_moves(row, col, self)
         else:
             return []
     #############################

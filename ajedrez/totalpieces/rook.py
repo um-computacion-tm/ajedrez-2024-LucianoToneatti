@@ -12,12 +12,12 @@ class Rook(Piece):
 
     def validar_colision(self, row, col, board):
         #Verifica si hay colisión con una pieza del mismo color en la posición dada
-        pieza = board[row][col]
+        pieza = board.get_piece(row, col)
         return pieza is not None and pieza.__color__ == self.__color__
 
     def validar_captura(self, row, col, board):
         #Verifica si la torre puede capturar una pieza enemiga en la posición dada
-        pieza = board[row][col]
+        pieza = board.get_piece(row, col)
         return pieza is not None and pieza.__color__ != self.__color__
 
     def valid_moves(self, row, col, board):

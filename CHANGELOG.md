@@ -1,6 +1,23 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [0.3.1] - 2024-09-19
+
+### Added
+
+-After many errors and investigating why it was the error that would not let me play, I realized that it was because: 
+
+Instead of doing this (which caused me the error): board[row][col]
+
+I had to write it like this: board.get_piece(row, col)
+
+And this was because I was trying to access the object in the wrong way, in short I had to use get_piece to obtain the piece.
+
+-This small change in all the pieces caused all my tests to stop working, not because they were wrong, but it was because of the syntax of how they were written, so I corrected them and now they work completely.
+
+-And finally, I modified the chess moves function so that it worked correctly.
+
+
 # [0.3.0] - 2024-09-18
 
 ### Added
