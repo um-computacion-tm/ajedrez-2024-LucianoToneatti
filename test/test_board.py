@@ -162,6 +162,33 @@ class TestBoard(unittest.TestCase):
         )
 
 
+    def test_remove_piece(self):
+        board = Board(for_test=True)
+        rook = Rook(color='BLACK')
+        board.set_piece(0, 0, rook)
+
+        board.remove_piece(0, 0)
+
+        self.assertIsNone(board.get_piece(0, 0))
+
+    def test_get_valid_moves(self):
+        board = Board(for_test=True)
+        rook = Rook(color='BLACK')
+        board.set_piece(3, 3, rook)
+
+        valid_moves = board.get_valid_moves(3, 3)
+
+        expected_moves = [(3, i) for i in range(8) if i != 3] + [(i, 3) for i in range(8) if i != 3]
+        self.assertEqual(sorted(valid_moves), sorted(expected_moves))
+
+    def test_get_valid_moves_empty_position(self):
+        board = Board(for_test=True)
+
+        valid_moves = board.get_valid_moves(3, 3)
+
+        self.assertEqual(valid_moves, [])
+
+
 
 if __name__ == '__main__':
     unittest.main()
