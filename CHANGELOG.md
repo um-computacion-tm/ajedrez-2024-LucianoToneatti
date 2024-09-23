@@ -15,6 +15,9 @@ All notable changes to this project will be documented in this file.
 -Modify "rook" and "alfils" again to simplify them as much as possible and so that Code Climate doesn't tell me anything.
 14:20
 -I refactored the "Pawn" and was able to remove the "validar_colisión" that had problems when removing it because the variables had other names and when I corrected them the tests stopped working but I managed to make it work by calling the "validar_colisión".
+14:51
+-I managed to do several things, I created the option to end the game and when it ends the board restarts. I also added the tests in "test_chess" that test these new end-game functions.
+And finally, I left it more aesthetically pleasing when starting the game.
 
 # [0.3.3] - 2024-09-22
 

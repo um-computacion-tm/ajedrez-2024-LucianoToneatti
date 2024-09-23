@@ -47,3 +47,11 @@ class Chess:
             self.__turn__ = "BLACK"
         else:
             self.__turn__ = "WHITE"  
+
+    def finalizar_partida(self):
+        print("La partida ha terminado.")
+        self.reiniciar_tablero()
+
+    def reiniciar_tablero(self):
+        self.__board__ = Board()
+        self.__turn__ = "WHITE"

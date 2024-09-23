@@ -86,6 +86,18 @@ class TestChess(unittest.TestCase):
         with self.assertRaises(EmptyPosition):
             self.chess.move(3, 3, 4, 4)
 
+    def test_finalizar_partida(self):
+        chess = Chess()
+        chess.finalizar_partida()
+        self.assertEqual(chess.turn, "WHITE")
+        self.assertEqual(str(chess.show_board()), str(Board()))
+
+    def test_reiniciar_tablero(self):
+        chess = Chess()
+        chess.move(6, 0, 4, 0)  # Mueve una pieza para cambiar el estado del tablero
+        chess.reiniciar_tablero()
+        self.assertEqual(chess.turn, "WHITE")
+        self.assertEqual(str(chess.show_board()), str(Board()))
     
    
 if __name__ == '__main__':
