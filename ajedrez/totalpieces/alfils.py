@@ -11,62 +11,21 @@ class Alfils(Piece):
         super().__init__(color) 
 
     def valid_moves(self, row, col, board):
-        
         moves = []
-
-        #Voy a marcar las "row" como r para mayor comodidad y "col" como c
-
-        ###ARRIBA IZQUIERDA###
-
-        r, c = row -1, col -1 #Les resto 1 para hacer los movimentos arriba izquierda
-        while r >=0 and c >=0:#Me permite hacer el movimiento las veces que quiera hasta que me salga del tablero en ese caso se corta el bucle
-            if self.validar_colision(r, c, board):
-                break
-            if self.validar_captura(r, c, board):
-                moves.append((r, c)) #Los agrego
-                break
-            moves.append((r, c)) #Los agrego
-            r -= 1
-            c -= 1
-
-        ###ARRIBA DERECHA###
-
-        r, c = row -1, col +1
-        while r >=0 and c <=7:
-            if self.validar_colision(r, c, board):
-                break
-            if self.validar_captura(r, c, board):
-                moves.append((r, c)) 
-                break
-            moves.append((r, c)) 
-            r -= 1
-            c += 1
-
-        ###ABAJO IZQUIERDA###
-
-        r, c = row +1, col -1
-        while r <=7 and c >=0:
-            if self.validar_colision(r, c, board):
-                break
-            if self.validar_captura(r, c, board):
-                moves.append((r, c)) 
-                break
-            moves.append((r, c)) 
-            r += 1
-            c -= 1
-
-        ###ABAJO DERECHA###
-
-        r, c = row +1, col +1
-        while r <=7 and c <=7:
-            if self.validar_colision(r, c, board):
-                break
-            if self.validar_captura(r, c, board):
-                moves.append((r, c)) 
-                break
-            moves.append((r, c)) 
-            r += 1
-            c += 1
-
+        direcciones = [(-1, -1), (-1, 1), (1, -1), (1, 1)]
+        for direc_row, direc_col in direcciones:
+            r, c = row + direc_row, col + direc_col
+            while 0 <= r < 8 and 0 <= c < 8:
+                if self.validar_colision(r, c, board):
+                    break
+                if self.validar_captura(r, c, board):
+                    moves.append((r, c))
+                    break
+                moves.append((r, c))
+                r += direc_row
+                c += direc_col
         return moves
+    
+    #Tuve que refacotorizar esta funcion porque era muy larga y de complejidad alta por lo que 
+    # era mejor darle las direcciones posibles y que las recorra. 
     
