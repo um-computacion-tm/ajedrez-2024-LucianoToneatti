@@ -10,13 +10,14 @@ def main():
 def play(chess):
 
     try:
+        print("VAMOS A JUGAR UNA PARTIDA DE AJEDREZ")
         print(chess.show_board())
         print("turn: ", chess.turn)
 
-        from_row = int(input("From row: "))
-        from_col = int(input("From col: "))
-        to_row = int(input("To Row: "))
-        to_col = int(input("To Col: "))
+        from_row = int(input("From row the 0 to 7: "))
+        from_col = int(input("From col the 0 to 7: "))
+        to_row = int(input("To Row the 0 to 7: "))
+        to_col = int(input("To Col the 0 to 7: "))
 
         chess.move(from_row,from_col,to_row,to_col,)
 

@@ -11,6 +11,8 @@ All notable changes to this project will be documented in this file.
 -Refactored the "valid_moves" function of "alfils.py" and "rook.py" because they were very complex and in this way they are more readable and cleaner.
 11:42
 -When refactoring "rook.py" and "alfils-py" they turned out to be very similar and it occurred to me to create a single function in "Piece" and call it from each piece.
+12:29
+-Modify "rook" and "bishops" again to simplify them as much as possible and so that Code Climate doesn't tell me anything.
 
 # [0.3.3] - 2024-09-22
 

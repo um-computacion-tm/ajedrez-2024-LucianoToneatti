@@ -11,11 +11,8 @@ class Rook(Piece):
         super().__init__(color) 
 
     def valid_moves(self, row, col, board):
-        moves = []
         direcciones = [(-1, 0), (1, 0), (0, -1), (0, 1)]
-        for direc_row, direc_col in direcciones:
-            moves.extend(self.valid_moves_in_direction(row, col, direc_row, direc_col, board))
-        return moves
+        return self.valid_moves_in_directions(row, col, direcciones, board)
 
     ########################
 
