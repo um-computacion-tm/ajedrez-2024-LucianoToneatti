@@ -11,47 +11,20 @@ class Rook(Piece):
         super().__init__(color) 
 
     def valid_moves(self, row, col, board):
-
         moves = []
-
-        # Muestra movimientos hacia arriba
-        for r in range(row - 1, -1, -1):
-            if self.validar_colision(r, col, board):
-                break
-            if self.validar_captura(r, col, board):
-                moves.append((r, col))
-                break
-            moves.append((r, col))
-
-        # Muestra movimientos hacia abajo
-        for r in range(row + 1, 8):
-            if self.validar_colision(r, col, board):
-                break
-            if self.validar_captura(r, col, board):
-                moves.append((r, col))
-                break
-            moves.append((r, col))
-
-        # MuestraMovimiento hacia la izquierda
-        for c in range(col - 1, -1, -1):
-            if self.validar_colision(row, c, board):
-                break
-            if self.validar_captura(row, c, board):
-                moves.append((row, c))
-                break
-            moves.append((row, c))
-
-        # Muestra Movimiento hacia la derecha
-        for c in range(col + 1, 8):
-            if self.validar_colision(row, c, board):
-                break
-            if self.validar_captura(row, c, board):
-                moves.append((row, c))
-                break
-            moves.append((row, c))
-
+        direcciones = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+        for direc_row, direc_col in direcciones:
+            r, c = row + direc_row, col + direc_col
+            while 0 <= r < 8 and 0 <= c < 8:
+                if self.validar_colision(r, c, board):
+                    break
+                if self.validar_captura(r, c, board):
+                    moves.append((r, c))
+                    break
+                moves.append((r, c))
+                r += direc_row
+                c += direc_col
         return moves
-
 
     ########################
 
