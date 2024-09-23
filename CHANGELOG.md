@@ -12,7 +12,9 @@ All notable changes to this project will be documented in this file.
 11:42
 -When refactoring "rook.py" and "alfils-py" they turned out to be very similar and it occurred to me to create a single function in "Piece" and call it from each piece.
 12:29
--Modify "rook" and "bishops" again to simplify them as much as possible and so that Code Climate doesn't tell me anything.
+-Modify "rook" and "alfils" again to simplify them as much as possible and so that Code Climate doesn't tell me anything.
+14:20
+-I refactored the "Pawn" and was able to remove the "validar_colisión" that had problems when removing it because the variables had other names and when I corrected them the tests stopped working but I managed to make it work by calling the "validar_colisión".
 
 # [0.3.3] - 2024-09-22
 
