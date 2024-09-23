@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+10:38
 -I started refactoring the validate_capture and validate_collision functions. Delete the functions of all pieces except the validate_collision of "Pawn" and place them in the "Piece" class so that they directly inherit the functions.
-
+11:00 AND 11:14
 -Refactored the "valid_moves" function of "alfils.py" and "rook.py" because they were very complex and in this way they are more readable and cleaner.
+11:42
+-When refactoring "rook.py" and "alfils-py" they turned out to be very similar and it occurred to me to create a single function in "Piece" and call it from each piece.
 
 # [0.3.3] - 2024-09-22
 

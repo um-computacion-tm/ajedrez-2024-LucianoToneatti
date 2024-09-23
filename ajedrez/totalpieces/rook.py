@@ -14,16 +14,7 @@ class Rook(Piece):
         moves = []
         direcciones = [(-1, 0), (1, 0), (0, -1), (0, 1)]
         for direc_row, direc_col in direcciones:
-            r, c = row + direc_row, col + direc_col
-            while 0 <= r < 8 and 0 <= c < 8:
-                if self.validar_colision(r, c, board):
-                    break
-                if self.validar_captura(r, c, board):
-                    moves.append((r, c))
-                    break
-                moves.append((r, c))
-                r += direc_row
-                c += direc_col
+            moves.extend(self.valid_moves_in_direction(row, col, direc_row, direc_col, board))
         return moves
 
     ########################
