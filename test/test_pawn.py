@@ -53,7 +53,7 @@ class TestPawn(unittest.TestCase):
         self.board.set_piece(1, 1, self.pawn_black)
         self.board.set_piece(2, 2, Piece("WHITE"))  # Captura en diagonal derecha
         self.board.set_piece(2, 0, Piece("WHITE"))  # Captura en diagonal izquierda
-        movimientos_esperados_11 = [(2, 1), (3, 1), (2, 0), (2, 2)]
+        movimientos_esperados_11 = [(2, 0), (2, 2), (2, 1), (3, 1)]
         self.assertEqual(self.pawn_black.valid_moves(1, 1, self.board), movimientos_esperados_11)
 
     def test_movimientos_basicos_de_peones_negros_sin_saltar_piezas_y_capturando(self):
