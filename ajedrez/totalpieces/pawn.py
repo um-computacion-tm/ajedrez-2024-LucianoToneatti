@@ -16,12 +16,6 @@ class Pawn(Piece):
         pieza = board.get_piece(nueva_fila, nueva_columna)
         return pieza is not None and pieza.__color__ == self.__color__
 
-    def validar_captura(self, row, col, board):
-        #Verifica si la torre puede capturar una pieza enemiga en la posición dada
-        pieza = board.get_piece(row, col)
-        return pieza is not None and pieza.__color__ != self.__color__
-
-
     def obtener_direcciones(self):
         #Obtiene la lista de direcciones segun que color es el peón
         if self.__color__ == "BLACK":
