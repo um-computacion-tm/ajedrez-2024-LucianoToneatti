@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [0.3.3] - 2024-09-22
+
+### Added
+
+-Create the tests for Chess.py
+
 # [0.3.2] - 2024-09-21
 
 ### Added
