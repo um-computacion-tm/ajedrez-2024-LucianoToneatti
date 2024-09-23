@@ -28,16 +28,17 @@ class Piece:    #Clase Padre
     
     ##########USADO PARA ALFILS Y ROOK##############
 
-    def valid_moves_in_direction(self, row, col, direc_row, direc_col, board):
+    def valid_moves_in_directions(self, row, col, direcciones, board):
         moves = []
-        r, c = row + direc_row, col + direc_col
-        while 0 <= r < 8 and 0 <= c < 8:
-            if self.validar_colision(r, c, board):
-                break
-            if self.validar_captura(r, c, board):
+        for direc_row, direc_col in direcciones:
+            r, c = row + direc_row, col + direc_col
+            while 0 <= r < 8 and 0 <= c < 8:
+                if self.validar_colision(r, c, board):
+                    break
+                if self.validar_captura(r, c, board):
+                    moves.append((r, c))
+                    break
                 moves.append((r, c))
-                break
-            moves.append((r, c))
-            r += direc_row
-            c += direc_col
+                r += direc_row
+                c += direc_col
         return moves
