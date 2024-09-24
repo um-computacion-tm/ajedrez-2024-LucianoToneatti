@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [0.3.5] - 2024-09-24
+
+### Added
+
+-I moved the addresses of "Alfils" and "Rook" to the "init" and called them from there, I also do this with the queen's addresses.
+And I moved the "kings" addresses and now they are static.
+
 # [0.3.4] - 2024-09-23
 
 ### Added
