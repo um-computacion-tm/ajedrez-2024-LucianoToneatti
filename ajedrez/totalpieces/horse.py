@@ -5,6 +5,7 @@ class Horse(Piece):
 
     black_str ="♘" #knight black
     white_str ="♞"  #knight white
+    direcciones = [(-2, -1), (-2, 1), (-1, -2), (-1, 2), (1, -2), (1, 2), (2, -1), (2, 1)]
     
     #No se me complico hacer el codigo de los movimientos del caballo porque 
     # sigue el formato de los Reyes con la diferencia que las casillas que ocupa son diferentes
@@ -14,9 +15,8 @@ class Horse(Piece):
     def valid_moves(self, row, col, board):
 
         moves = []
-        direcciones = [(-2, -1), (-2, 1), (-1, -2), (-1, 2), (1, -2), (1, 2), (2, -1), (2, 1)]
 
-        for direc_row, direc_col in direcciones:
+        for direc_row, direc_col in self.direcciones:
             nueva_fila, nueva_columna = row + direc_row, col + direc_col
 
             if 0 <= nueva_fila < 8 and 0 <= nueva_columna < 8:
