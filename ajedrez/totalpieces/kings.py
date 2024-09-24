@@ -1,15 +1,12 @@
 from ajedrez.pieces import Piece
-
+from ajedrez.totalpieces import KINGS_MOVEMENTS
 ###REYES###
 class Kings(Piece):
     
     black_str ="♔"
     white_str ="♚"
-    direcciones = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
+    direcciones = KINGS_MOVEMENTS
     
-
-    def __init__(self, color):
-        super().__init__(color)
 
     def valid_moves(self, row, col, board):
 

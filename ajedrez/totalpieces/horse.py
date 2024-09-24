@@ -1,16 +1,15 @@
 from ajedrez.pieces import Piece
+from ajedrez.totalpieces import HORSES_MOVEMENTS
 
 ###CABALLOS###
 class Horse(Piece):
 
     black_str ="♘" #knight black
     white_str ="♞"  #knight white
-    direcciones = [(-2, -1), (-2, 1), (-1, -2), (-1, 2), (1, -2), (1, 2), (2, -1), (2, 1)]
+    direcciones = HORSES_MOVEMENTS
     
     #No se me complico hacer el codigo de los movimientos del caballo porque 
     # sigue el formato de los Reyes con la diferencia que las casillas que ocupa son diferentes
-    def __init__(self, color):
-        super().__init__(color)
 
     def valid_moves(self, row, col, board):
 

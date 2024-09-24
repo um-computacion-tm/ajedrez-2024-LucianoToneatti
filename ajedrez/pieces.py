@@ -42,3 +42,6 @@ class Piece:    #Clase Padre
                 r += direc_row
                 c += direc_col
         return moves
+    
+    def valid_moves(self, row, col, board):
+        return self.valid_moves_in_directions(row, col, self.direcciones, board)
